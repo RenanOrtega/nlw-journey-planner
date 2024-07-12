@@ -1,9 +1,14 @@
-﻿namespace Exception.ExceptionsBase;
+﻿using System.Net;
 
-public class JourneyException : SystemException
+namespace Exception.ExceptionsBase;
+
+public abstract class JourneyException : SystemException
 {
     public JourneyException(string messsage) : base(messsage)
     {
 
     }
+
+    public abstract HttpStatusCode GetStatusCode();
+    public abstract IList<string> GetErrorMessages();
 }

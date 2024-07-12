@@ -88,7 +88,16 @@ namespace Exception.ExceptionsBase {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Unknown Error..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Trip not found..
+        /// </summary>
+        public static string TRIP_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("TRIP_NOT_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Unknown error..
         /// </summary>
         public static string UNKNOWN_ERROR {
             get {

@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Entities;
+using Journey.Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure;
@@ -10,5 +11,12 @@ public class JourneyDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlite("Data Source=C:\\Users\\renan\\Downloads\\JourneyDatabase.db");
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Activity>().ToTable("Activities");
     }
 }

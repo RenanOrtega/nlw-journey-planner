@@ -1,6 +1,4 @@
-﻿using Journey.Infrastructure.Entities;
-
-namespace Infrastructure.Entities;
+﻿namespace Infrastructure.Entities;
 
 public class Trip
 {
